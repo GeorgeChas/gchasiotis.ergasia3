@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+ 
+ 	<servlet>
+ 		<display-name>union</display-name>
+ 		<servlet-name>union</servlet-name>
+ 		<servlet-class>my_package.createServlet</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>union</servlet-name>  
+ 		<url-pattern>/create</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet>
+ 		<display-name>union1</display-name>
+ 		<servlet-name>union1</servlet-name>
+ 		<servlet-class>my_package.backServlet</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>union1</servlet-name>  
+ 		<url-pattern>/back</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet>
+ 		<display-name>union2</display-name>
+ 		<servlet-name>union2</servlet-name>
+ 		<servlet-class>my_package.storeServlet</servlet-class>
+ 	</servlet>
+ 	<servlet>
+ 		<description>
+ 		</description>
+ 		<display-name>DatabaseBarcodeExist</display-name>
+ 		<servlet-name>DatabaseBarcodeExist</servlet-name>
+ 		<servlet-class>my_package.DatabaseBarcodeExist</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>union2</servlet-name>
+ 		<url-pattern>/store</url-pattern>
+ 	</servlet-mapping>
+ 	<servlet-mapping>
+ 		<servlet-name>DatabaseBarcodeExist</servlet-name>
+ 		<url-pattern>/DatabaseBarcodeExist</url-pattern>
+ 	</servlet-mapping>
+ 	
+</web-app>
